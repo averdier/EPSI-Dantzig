@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from sympy import symbols
-from core import init_dantzig, dantzig_iteration, minimisation, maximisation
+from core import minimisation, maximisation
 
 if __name__ == '__main__':
     X1, X2, X3, X4, X5 = symbols('X1 X2 X3 X4 X5')

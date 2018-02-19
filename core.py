@@ -83,44 +83,6 @@ def find_ve(eq, mode='max'):
     return ve
 
 
-def max_find_ve(eq):
-    """
-    Find Ve in equation for maximisation
-    Ve = Var with Max { Coeff in expr }
-
-    :param eq:
-    :return:
-    """
-    s = list(eq.as_coefficients_dict().keys())
-    ve = s[0] if s[0] != 1 else s[1]
-
-    for var in s:
-        if var != 1:
-            if eq.coeff(var) > eq.coeff(ve):
-                ve = var
-
-    return ve
-
-
-def min_find_ve(eq):
-    """
-    Find Ve in equation for minimisation
-    Ve = Var with Max { Coeff in expr }
-
-    :param eq:
-    :return:
-    """
-    s = list(eq.as_coefficients_dict().keys())
-    ve = s[0] if s[0] != 1 else s[1]
-
-    for var in s:
-        if var != 1:
-            if eq.coeff(var) < eq.coeff(ve):
-                ve = var
-
-    return ve
-
-
 def find_ve_value(exchange_expr, ve):
     """
     Find Ve value with exchange expression
