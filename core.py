@@ -336,7 +336,7 @@ def maximisation(problem):
     print('#\n#\tResolved after : {0} iteration'.format(cpt))
     print('#\t Results: ')
 
-    result = {}
+    result = {'z': step['z']}
     for s in list(problem['z'].as_coefficients_dict().keys()):
         if s != 1:
             if s in step['out_vars']:
